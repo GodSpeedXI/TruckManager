@@ -6,7 +6,7 @@ namespace MyTruckManager.BaseObj
 {
     public class TruckBase : IDriverRole, ICleanerRole, IMaintainerRole
     {
-        private Random random = new Random(30);
+        private Random random;
         private int _decline { get; set; } = 100;
         private int _dirty { get; set; } = 100;
         protected string truckColor;
@@ -16,6 +16,11 @@ namespace MyTruckManager.BaseObj
         public IWheel Wheel3 { get; set; }
         public IWheel Wheel4 { get; set; }
         TruckStatus ICanCheckStatus.TruckStatus { get; set; } = TruckStatus.None;
+
+        public TruckBase(int luck = 30)
+        {
+            random = new Random(luck);
+        }
 
         /// <summary>
         /// When driver is driving, the truck will be gradually declined.

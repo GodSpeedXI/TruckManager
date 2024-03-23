@@ -7,16 +7,16 @@ using MyTruckManager.BaseObj;
 
 namespace MyTruckManager.Objects
 {
-    public class RedTruck : TruckBase
+    public class BlueTruck : TruckBase
     {
-        public RedTruck() : base(100)
+        public BlueTruck() : base(50)
         {
-            truckColor = "RedTruck";
+            truckColor = "BlueTruck";
 
             Wheel1 = new Michelin();
-            Wheel2 = new BridgeStone();
+            Wheel2 = new Michelin();
             Wheel3 = new Michelin();
-            Wheel4 = new BridgeStone();
+            Wheel4 = new Michelin();
         }
     }
 }
